@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/one_f">
+
+    <fragment
+        android:id="@+id/one_f"
+        android:name="com.kun.daggerhiltpractice.ui.main.OneFragment"
+        android:label="one"
+        tools:layout="@layout/fragment_one">
+        <action
+            android:id="@+id/action_one_to_two"
+            app:launchSingleTop="true"
+            app:destination="@id/two_f" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/two_f"
+        android:name="com.kun.daggerhiltpractice.ui.main.TwoFragment"
+        android:label="two"
+        tools:layout="@layout/fragment_two">
+        <action
+            app:popUpTo="@id/one_f"
+            android:id="@+id/action_two_to_one" />
+    </fragment>
+</navigation>
