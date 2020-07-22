@@ -11,6 +11,7 @@ import com.kun.daggerhiltpractice.data.CommonRepository
 import kotlinx.android.synthetic.main.fragment_two.*
 import javax.inject.Inject
 
+// two fragment
 class TwoFragment : Fragment() {
 
     @Inject
